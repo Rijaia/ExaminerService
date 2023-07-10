@@ -3,9 +3,11 @@ package com.example.examinerserrvice.service.impl;
 import com.example.examinerserrvice.Question;
 import com.example.examinerserrvice.service.QuestionService;
 import jakarta.annotation.PostConstruct;
+import org.junit.jupiter.api.ClassOrderer;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Service
@@ -35,16 +37,18 @@ public class JavaQuestionService implements QuestionService {
 
     @Override
     public Question remove(Question question) {
-        return null;
+        boolean isRemove = questions.remove(question);
+        return isRemove ? question : null;
     }
 
     @Override
-    public Question getAll() {
-        return null;
+    public Collection<Question> getAll() {
+        return new ArrayList<>(questions);
     }
 
     @Override
     public Question getRandomQuestion() {
-        return null;
+        int randomIndex = random;
+        return questions(randomIndex);
     }
 }
