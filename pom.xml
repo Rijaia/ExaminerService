@@ -27,37 +27,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
-            <version>1.4.8</version>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.9.3</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.ow2.clif.isac</groupId>
-            <artifactId>Random</artifactId>
-            <version>3.0.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.ow2.clif.isac</groupId>
-            <artifactId>Random</artifactId>
-            <version>3.0.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.ow2.clif.isac</groupId>
-            <artifactId>Random</artifactId>
-            <version>3.0.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.ow2.clif.isac</groupId>
-            <artifactId>Random</artifactId>
-            <version>3.0.3</version>
-        </dependency>
     </dependencies>
 
     <build>
