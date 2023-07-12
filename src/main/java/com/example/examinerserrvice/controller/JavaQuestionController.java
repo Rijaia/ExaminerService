@@ -1,5 +1,6 @@
-package com.example.examinerserrvice;
+package com.example.examinerserrvice.controller;
 
+import com.example.examinerserrvice.Question;
 import com.example.examinerserrvice.service.QuestionService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
