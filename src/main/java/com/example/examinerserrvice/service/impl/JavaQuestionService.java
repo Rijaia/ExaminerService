@@ -6,11 +6,15 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Random;
 
 @Service
 public class JavaQuestionService implements QuestionService {
     private final List<Question> questions = new ArrayList<>();
+   private final Random random = new Random();
+
 
     @PostConstruct
     public void setup() {
@@ -32,19 +36,24 @@ public class JavaQuestionService implements QuestionService {
         questions.add(question);
         return question;
     }
-
+    @Override
+    public Question remove(String question, String answer) {
+        return remove(new Question(question, answer));
+    }
     @Override
     public Question remove(Question question) {
-        return null;
+        boolean isRemove = questions.remove(question);
+        return isRemove ? question : null;
     }
 
     @Override
-    public Question getAll() {
-        return null;
+    public Collection<Question> getAll() {
+        return new ArrayList<>(questions);
     }
 
     @Override
     public Question getRandomQuestion() {
-        return null;
+        int randomIndex = random.nextInt(questions.size());
+        return questions.get(randomIndex);
     }
 }
